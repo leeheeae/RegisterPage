@@ -15,20 +15,18 @@ const inputCheck = () => {
 
 // value가 있고 없고 설정
 const inputChangeCheckItem = (item) => {
-    if (item.value.length > 0) {
-        item.classList.add('focus');
-    } else {
-        item.classList.remove('focus');
-    }
+    item.value.length > 0
+		? item.classList.add('focus')
+		: item.classList.remove('focus');
 }
 
 //focus 됐을 때 value가 있으면 x표시 나타나도록
 const inputFocusValue = (item) => {
-    if (item.value.length > 0) {
-        item.classList.add('focus');
-    } else {
-        item.classList.remove('focus');
-    }
+    // if (item.value.length > 0) {
+    //     item.classList.add('focus');
+    // } else {
+    //     item.classList.remove('focus');
+    // }
 }
 
 
