@@ -15,7 +15,6 @@ const inputCheck = () => {
     }
 }
 
-//리셋
 // value가 있고 없고 설정
 const inputChangeCheckItem = (item) => {
     if (item.value.length > 0) {
@@ -33,10 +32,10 @@ const inputFocusValue = (item) => {
     resetBtn.innerHTML = `X`;
     resetBtn.classList.add('resetBtn');
 
+    //리셋버튼 연결
     resetBtn.addEventListener('click', () => {
-		item.value = '';
-        item.classList.remove('focus');
-    })
+        resetInput(item);
+    });
 
     if (itemPerent.querySelector('.resetBtn')) return;
     if (item.value.length > 0) {
@@ -44,11 +43,17 @@ const inputFocusValue = (item) => {
     }
 }
 
+const resetInput = (item) => {
+    item.value = '';
+	item.classList.remove('focus');
+};
+
+
+//포커스 풀렸을 때
 const inputFocusBlur = (item) => {
     let resetBtn = item.parentNode.querySelector('.resetBtn');
-    resetBtn.remove()
+    if (!resetBtn) return;
+    resetBtn.remove();
 }
-
-
 
 window.addEventListener('load', inputCheck)
