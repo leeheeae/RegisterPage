@@ -39,6 +39,22 @@ body {
     overflow: hidden;
     position: relative;
 }
+.registerForm .inputForm .resetBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+}
 .registerForm .inputForm h4 {
     position: absolute;
     top: 16px;
