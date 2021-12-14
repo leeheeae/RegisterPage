@@ -48,12 +48,34 @@ const resetInput = (item) => {
 	item.classList.remove('focus');
 };
 
-
 //포커스 풀렸을 때
 const inputFocusBlur = (item) => {
     let resetBtn = item.parentNode.querySelector('.resetBtn');
     if (!resetBtn) return;
     resetBtn.remove();
 }
+
+//이메일 체크
+const emailCheck = (email) => {
+	const reg =
+		/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+    return reg.test(email);
+}
+
+//이메일 체크 표시
+const emailCheckInfo = (input) => {
+    const self = input;
+    const check = emailCheck(self.value);
+    const infoBox = self.parentNode.querySelector('.info');
+
+
+    if (check || self.value.length === 0) return infoBox.innerHTML = '';
+
+    infoBox.innerHTML = '이메일 형식이 아닙니다.';
+
+    
+}
+
 
 window.addEventListener('load', inputCheck)

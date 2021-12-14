@@ -33,11 +33,17 @@ body {
 .registerForm .inputForm > div {
     width: 100%;
     height: 62px;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
     border: 1px solid #CCC;
     border-radius: 3px;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
+}
+.registerForm .inputForm > div .info {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 2px;
+    color: red;
 }
 .registerForm .inputForm .resetBtn {
     position: absolute;
