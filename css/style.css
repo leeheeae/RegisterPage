@@ -1,0 +1,89 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue;
+}
+.wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* registerForm */
+.registerForm {
+    padding: 40px;
+    max-width: 550px;
+    min-width: 360px;
+    width: 100%; 
+    min-height: 400px;
+    background-color: #fff;
+}
+.registerForm .title h2 {
+    font-size: 28px;
+}
+.registerForm .title p {
+    font-size: 16px;
+    font-weight: 400;
+}
+.registerForm .inputForm {
+    margin-top: 30px;
+}
+.registerForm .inputForm > div {
+    width: 100%;
+    height: 58px;
+    margin-bottom: 16px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.registerForm .inputForm h4 {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #999;
+    transition: 0.25s;
+}
+.registerForm .inputForm input {
+    width: 100%;
+    padding: 12px 0 0 10px;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+.registerForm .inputForm input:focus + h4,
+.registerForm .inputForm input:active + h4 {
+    top: 6px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: cornflowerblue;
+}
+.registerForm .inputForm input:focus,
+.registerForm .inputForm input:active {
+    border: 2px solid cornflowerblue;
+}
+.registerForm .getStartedBtn {
+    display: block;
+    width: 100%;
+    height: 58px;
+    background-color: rgb(36, 190, 196);
+    border-radius: 3px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.registerForm .getStartedBtn:hover {
+    background-color: rgb(5, 128, 133);
+}
+.registerForm .getStartedBtn:active {
+    transform: translateY(3px);
+}
